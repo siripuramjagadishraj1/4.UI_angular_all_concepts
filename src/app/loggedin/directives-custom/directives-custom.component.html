@@ -1,0 +1,18 @@
+<p>directives-custom works!</p>
+
+<pre>
+<![CDATA[
+*ngIf
+*ngFor="let each of List"
+[ngStyle]="{background-color: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}"
+  If server status is online thne only online css is loaded.
+<app-server *ngFor="let  server of servers; let i = index"></app-server>
+
+Directives with templates known as Components
+Directives that creates and destroys DOM elements known as Structural Directives
+Directives that manipulate DOM by changing behavior and appearance known as Attribute Directives
+[ngSwitch]
+
+]]>
+</pre>
