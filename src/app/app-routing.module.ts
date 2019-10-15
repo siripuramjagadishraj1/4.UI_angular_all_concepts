@@ -28,6 +28,8 @@ import { FormDemoComponent } from './loggedin/form-demo/form-demo.component';
 import { DirectivesCustomComponent } from './loggedin/directives-custom/directives-custom.component';
 import { DecoratorCustomComponent } from './loggedin/decorator-custom/decorator-custom.component';
 import { LazyLoadingComponent } from './loggedin/lazy-loading/lazy-loading.component';
+import { ComponentLifeCycleComponent } from './loggedin/component-life-cycle/component-life-cycle.component';
+import { BuildMiscInstallsComponent } from './loggedin/build-misc-installs/build-misc-installs.component';
 
 
 
@@ -55,7 +57,9 @@ const routes: Routes = [
    { path: 'DecoratorCustomComponent',component: DecoratorCustomComponent },
    //{ path: 'LazyLoadingComponent', component:LazyLoadingComponent },
    //{ path: 'LazyLoadingComponent', loadChildren:() => import('./NewLazyModule').then(mod => mod.CustomersModule) }
-   { path: 'LazyLoadingComponent', loadChildren:'./NewLazyModule#CustomersModule'}
+   { path: 'LazyLoadingComponent', loadChildren:'./NewLazyModule#CustomersModule'},
+   { path: 'ComponentLifeCycleComponent',component: ComponentLifeCycleComponent },
+   { path: 'BuildMiscInstallsComponent',component: BuildMiscInstallsComponent }
 ];
 
 @NgModule({

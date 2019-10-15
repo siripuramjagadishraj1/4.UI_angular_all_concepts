@@ -39,6 +39,9 @@ import { DirectivesCustomComponent } from './loggedin/directives-custom/directiv
 import { DecoratorCustomComponent } from './loggedin/decorator-custom/decorator-custom.component';
 import { LazyLoadingComponent } from './loggedin/lazy-loading/lazy-loading.component';
 import { LazyModuleComponent } from './loggedin/lazy-loading/lazy-module/lazy-module.component';
+import { HighlightDirective } from './loggedin/directives-custom/highlight.directive';
+import { ComponentLifeCycleComponent } from './loggedin/component-life-cycle/component-life-cycle.component';
+import { BuildMiscInstallsComponent } from './loggedin/build-misc-installs/build-misc-installs.component';
 
 
 
@@ -76,7 +79,10 @@ import { LazyModuleComponent } from './loggedin/lazy-loading/lazy-module/lazy-mo
     DirectivesCustomComponent,
     DecoratorCustomComponent,
     LazyLoadingComponent,
-    LazyModuleComponent
+    LazyModuleComponent,
+    HighlightDirective,
+    ComponentLifeCycleComponent,
+    BuildMiscInstallsComponent
   ],
   exports: [
     

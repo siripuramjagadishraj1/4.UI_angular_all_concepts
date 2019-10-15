@@ -1,27 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OutputElementsComponent } from './output-elements.component';
+import { BuildMiscInstallsComponent } from './build-misc-installs.component';
 
-describe('OutputElementsComponent', () => {
-  let component: OutputElementsComponent;
-  let fixture: ComponentFixture<OutputElementsComponent>;
+describe('BuildMiscInstallsComponent', () => {
+  let component: BuildMiscInstallsComponent;
+  let fixture: ComponentFixture<BuildMiscInstallsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OutputElementsComponent ]
+      declarations: [ BuildMiscInstallsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OutputElementsComponent);
+    fixture = TestBed.createComponent(BuildMiscInstallsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  /*
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  */
 });

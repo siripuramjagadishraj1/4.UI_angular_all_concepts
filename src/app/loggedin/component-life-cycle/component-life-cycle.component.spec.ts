@@ -1,27 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OutputElementsComponent } from './output-elements.component';
+import { ComponentLifeCycleComponent } from './component-life-cycle.component';
 
-describe('OutputElementsComponent', () => {
-  let component: OutputElementsComponent;
-  let fixture: ComponentFixture<OutputElementsComponent>;
+describe('ComponentLifeCycleComponent', () => {
+  let component: ComponentLifeCycleComponent;
+  let fixture: ComponentFixture<ComponentLifeCycleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OutputElementsComponent ]
+      declarations: [ ComponentLifeCycleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OutputElementsComponent);
+    fixture = TestBed.createComponent(ComponentLifeCycleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  /*
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  */
 });
