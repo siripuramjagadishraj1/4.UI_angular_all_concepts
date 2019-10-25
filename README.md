@@ -1,4 +1,4 @@
-### Topics Covered
+# Topics Covered
 
 1. Installing Stuff.
 2. Angular Project Structure
@@ -17,6 +17,10 @@
 15. Lazy [DashBoard]
 16. Component Life Cycle
 17. Build and Other Commands ???
+
+# Topics Pending
+1. Custom Decorators
+2. Template form
 
 # MyDreamApp
 
