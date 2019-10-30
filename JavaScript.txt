@@ -1,0 +1,130 @@
+var test=[1,5,6];
+for(let each of test){
+	console.log(each);
+}
+
+var test=['Kumar','is'];
+for(let each of test){
+	console.log(each);
+}
+
+for(let kas=1;kas<10;kas++){
+	console.log(kas)
+}
+
+Learning Resources:
+==================
+JS-Fiddle,plunkr
+
+JavaScript from Scratch:
+========================
+* Delete variable in JavaScript
+* Nested functions vs Closures.
+* String: split, join, splice, search(/regex/) RegExp
+* Regex
+* Objects with functions in JavaScript.
+* Classes in JS.
+* Function parameters setting too high and low.
+* Scopes global and function, braces{} do not make a scope.
+* 1 === true, 1 == true
+* &&, || are like java operations or not..?
+
+Rapid JavaScript Training:
+==========================
+* JS-Fiddle,plunkr
+* Hoisting
+* Undefined and Not Defined
+
+Terminiologies:
+==============
+* Closures
+* Hoisting, Scopes (Global, Function, Block)
+* Operators.
+* Arrays & References
+* Object, JSON, Prototypes
+* Functions
+* BOM vs DOM: 
+* Event Handlers:
+* Built in Objects and Function:
+
+CODING STANDARDS
+================
+SOLID, 
+KISS, 
+DRY,
+YAGNI
+Avoid Premature Optimization
+
+
+Prototypes  vs __proto__ ..?
+Only in IE __proto__ works and its not safe.
+Standardized in ES6
+project.__proto__ === Object.prototype  > true
+Object.create()
+
+
+secretProject.__proto__ === project > true
+secretProject.__proto__.__proto__ === project.__proto__ > true
+secretProject.__proto__ === project
+secretProject.__proto__.__proto__ === Object.prototype
+var project
+var testObject = {}
+
+var task = {}
+Object.defineProperty(task, 'text',
+			{ value: 'get THis job done..!'
+			  //,writable: true
+			  //,enumerable: true
+			  //,configurable: false //cant redefine it.
+			  });
+console.log(task.text)
+for(var f in task) {console.log(f)}
+
+============
+var task = {
+	_dueDate: '1/15/16'
+};
+Object.defineProperty(task,'dueDate',{
+	get: function(){
+		return this._dueDate;
+	},
+	set: function(newValue){
+		console.log('setter Called');
+		this._dueDate=newValue;
+	}
+});
+task.dueDate = '2/2/16';  //calls setter.
+
+Object.defineProperties(task, {
+	'text':{
+		value: 'New Task'
+	},
+	'dueDate':{
+		value: '1/15/16'
+	}
+});
+console.log(task.text + 'Due :' + task.dueDate);
+
+var task = {};
+Object.defineProperties(task ,{
+	'text':{
+		value: 'New Task'
+	}
+});
+var descriptor = Object.getOwnPropertyDescriptor(task,'text');
+console.log(descriptor);  //gets all the information.
+
+Miscelenious Functions:
+-----------------------
+var project = {
+	name: 'Top Secret Project',
+	dueDate: '1-1-12'
+};
+project.hasOwnProperty('name')               > true
+project.hasOwnProperty('toString')           > false
+project.__proto__.hasOwnProperty('toString') > true
+
+Functions:
+==========
+1. Naming function Expressions.
+https://java2blog.com/java-interview-questions-for-5-years-experience/
