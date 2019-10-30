@@ -1,3 +1,27 @@
+# Topics Covered
+
+1. Installing Stuff.
+2. Angular Project Structure
+3. Integration of BootStrap and JQuery
+4. Learn TypeScript
+5. Routing & AuthGuards
+6. Bindings in HTML
+7. LocalReferences and Tricks
+8. @Input [Inputs]
+9. @Output [Event Emitters]
+10. @Pipe [Custom Pipes]
+11. Http-Calls
+12. Form's & File upload
+13. Directives
+14. Decorator
+15. Lazy [DashBoard]
+16. Component Life Cycle
+17. Build and Other Commands ???
+
+# Topics Pending
+1. Custom Decorators
+2. Template form
+
 # MyDreamApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.1.
