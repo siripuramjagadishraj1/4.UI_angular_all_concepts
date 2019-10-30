@@ -1,3 +1,84 @@
+<div *ngIf="showDisplay">
+
+3.1,2 [1hr]<br>
+1.2 [grow] [1hr]<br>
+2.1,2 [grow] [2-3 hours]<br>
+<br>
+2.3,4<br>
+SBI, LIC, HR-BERRTY, KAVYA Hospital, Resume, Fridge.
+
+<h1>Topics Completed</h1>
+<table class="" border="1">
+        <tr style="background-color: grey;"> 
+            <td>Sl NO:</td>
+            <td>Category</td>
+            <td>Topic</td>
+            <td>Time Taken</td> 
+            <td>FromTo</td> 
+            <td>Status</td> 
+            <td>Content</td>
+            <td>Comment</td>
+        </tr>
+        <tr *ngFor="let  eachTopic of uiTopicsCompleted; let i = index" [ngStyle]="{'background-color': getColor(i)}" > 
+            <td>{{i+1}}</td>
+            <td>{{eachTopic.category}}</td>
+            <td>{{eachTopic.topic}}</td>
+            <td>{{eachTopic.duration}}</td>
+            <td>{{eachTopic.fromTo}}</td>
+            <td [ngClass]="{pendingClass: eachTopic.status == 'PENDING', notPendingClass: eachTopic.status != 'PENDING'}">{{eachTopic.status}}</td>
+            <td><div *ngFor="let each of eachTopic.content;"><a href="{{each.link}}">{{each.topic}}</a></div></td>
+            <td>{{eachTopic.comment}}</td>
+        </tr>
+</table>
+<br>
+<table class="" border="1">
+        <tr style="background-color: grey;"> 
+            <td>Sl NO:</td>
+            <td>Category</td>
+            <td>Topic</td>
+            <td>Time Taken</td> 
+            <td>FromTo</td> 
+            <td>Status</td> 
+            <td>Content</td>
+            <td>Comment</td>
+        </tr>
+        <tr *ngFor="let  eachTopic of backEndTopicsCompleted; let i = index" [ngStyle]="{'background-color': getColor(i)}" > 
+            <td>{{i+1}}</td>
+            <td>{{eachTopic.category}}</td>
+            <td>{{eachTopic.topic}}</td>
+            <td>{{eachTopic.duration}}</td>
+            <td>{{eachTopic.fromTo}}</td>
+            <td [ngClass]="{pendingClass: eachTopic.status == 'PENDING', notPendingClass: eachTopic.status != 'PENDING'}">{{eachTopic.status}}</td>
+            <td><div *ngFor="let each of eachTopic.content;"><a href="{{each}}">{{each}}</a></div></td>
+            <td>{{eachTopic.comment}}</td>
+        </tr>
+</table>
+<br>
+<table class="" border="1">
+    <tr style="background-color: grey;"> 
+        <td>Sl NO:</td>
+        <td>Category</td>
+        <td>Topic</td>
+        <td>Time Taken</td> 
+        <td>FromTo</td> 
+        <td>Status</td> 
+        <td>Content</td>
+        <td>Comment</td>
+    </tr>
+    <tr *ngFor="let  eachTopic of otherTopicsCompleted; let i = index" [ngStyle]="{'background-color': getColor(i)}" > 
+        <td>{{i+1}}</td>
+        <td>{{eachTopic.category}}</td>
+        <td>{{eachTopic.topic}}</td>
+        <td>{{eachTopic.duration}}</td>
+        <td>{{eachTopic.fromTo}}</td>
+        <td [ngClass]="{pendingClass: eachTopic.status == 'PENDING', notPendingClass: eachTopic.status != 'PENDING'}">{{eachTopic.status}}</td>
+        <td><div *ngFor="let each of eachTopic.content;"><a href="{{each.link}}">{{each.topic}}</a></div></td>
+        <td>{{eachTopic.comment}}</td>
+    </tr>
+</table>
+
+</div>
+
 <pre>
 Installing NodeJS: (https://nodejs.org/dist/v10.16.3/node-v10.16.3-win-x64.zip)
 ==================

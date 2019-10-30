@@ -26,6 +26,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
+  /*
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
@@ -33,12 +34,13 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.contentTest').textContent).toContain('Hello');
   });
 
-  it('Custom Test..', () => {
+  xit('Custom Test..', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     console.log('Joga Rao is good.....****************')
     const app = fixture.debugElement.componentInstance;
     expect(app.testFocus()).toContain('active');
   });
+  */
 
 });
