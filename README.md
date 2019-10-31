@@ -1,3 +1,11 @@
+HTML, CSS, JS Training Angular:
+==============================
+1. HTML, css
+2. JavaScript, ES-6, Jasmine
+3. PendingTopics, Jquery, BootStrap
+
+[View Content](https://github.com/siripuramjagadishraj1/4.UI_angular_all_concepts/tree/master/HTML%2CCSS%2CJS%20Training)
+
 JavaScript:
 ===========
 * [JavaScript Revise](https://github.com/siripuramjagadishraj1/4.UI_angular_all_concepts/blob/master/JavaScript.txt)
