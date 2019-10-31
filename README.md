@@ -1,5 +1,9 @@
-# Topics Covered
+JavaScript:
+===========
+* [JavaScript Revise](https://github.com/siripuramjagadishraj1/4.UI_angular_all_concepts/blob/master/JavaScript.txt)
 
+Angular Topics Covered:
+=======================
 1. Installing Stuff.
 2. Angular Project Structure
 3. Integration of BootStrap and JQuery
