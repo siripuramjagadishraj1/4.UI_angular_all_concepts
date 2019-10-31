@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstallingStuffComponent implements OnInit {
 
-  showDisplay:boolean = false;
+  showDisplay:boolean = true;
   constructor() { }
 
   ngOnInit() {
