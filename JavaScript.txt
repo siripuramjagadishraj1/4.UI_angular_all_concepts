@@ -1,3 +1,224 @@
+JavaScript and ES6:
+===================
+1. Introduction:	DONE
+2. Variables and Parameters:
+	let, 
+	const,
+	Destructuring [x,y]=[y,x] for swapping
+	Default Parameters
+	...Rest Parameters
+	...Spread
+	Templates	var tests =`hai ${x}`;
+3. Classes {Polymorphism, Inheritance, Abstraction}
+	//Legacy way
+	var Employee = function(){}
+	Employee.prototype = { dowork: function(){return 'Okay'}}
+	var e = new Employee();
+	e.doWork();
+	
+	//Now
+	class Employee{
+		doWork(){
+			return 'Okay..!';
+		}
+	}
+	var e = new Employee();
+	e.doWork();
+	
+	//Get and Set..EC5
+	class Animal{
+		constructor(name){
+			this._name = name;
+		}
+	
+		get name(){
+			return this._name;  ///Use _name to avoid recursion.
+		}
+		
+		set name(newValue){
+			this._name = newValue;
+		}
+	}
+	var ani = new Animal();
+	ani.name = "Jaga";
+	console.log(ani);
+	
+	//Inheritance
+	class Person{
+		constructor(name){
+			this._name = name;
+		}
+		get name(){
+			return this._name;
+		}
+		set name(newValue){
+			if(newValue){
+				this._name = newValue;
+			}
+		}
+		doWork(){
+			return 'One';
+		}
+	}
+	class Employee extends Person{
+		/*
+		constructor(){
+			super('Alex');
+		}
+		*/
+		doWork(){
+			return 'Two';
+		}
+	}
+	var e = new Employee('Emps Jaga');
+	console.log(e) //Check commenting and uncommenting constructor..
+	
+4. Functionala Programming..?
+	a. Arrow Functions, easy, lexically binds to this..
+		this.name = 'Scott';
+           var self = this;
+           
+           setTimeout(function(){
+             //expect(this.name).toBe('Scott');  this does not work..
+             expect(self.name).toBe('Scott');
+             done();
+           }, 3000);
+           expect(this.name).toBe('Scott');
+	b. Iterator[Symbol.iterator]
+		var terrray = [1,2,3][Symbol.iterator]()
+		var array = [1,2,3,4,5,6,7,8,9]
+		var iterator = array.values()
+		console.log(iterator.next().value)
+		
+		for(let i of [1,2,3,4]){console.log(i);}
+		for(let i in {name: 'Jagadish', age: 53}){console.log(i);}
+	c. Generators:
+		let numbers = function*(){
+			yield 1;
+			yield 2;
+			yield 3;
+		}
+		let iterator = numbers();
+		iterator.next()
+	d. 
+		
+5. Built in Objects
+	Number:
+		a = 017;  //Octal
+		a = 0xa;  //hexa
+		a = 0b11; //bian
+		isNaN('NaN')         //true
+		Number.isNaN('NaN')  //false
+		Math.pow(2,53) == Math.pow(2,53)+1 //true
+		Number.MAX_SAFE_INTEGER, Number.MIN_SAFE_INTEGER
+		Number.isSafeInteger(Number.MAX_SAFE_INTEGER+1)
+	Math
+		Few trignometric function.
+		Math.log10(100)
+		Math.clz32(5)			//Leading zeros in 32 bit precission.
+		Math.fround(2.2)		//Precission
+		......few more..
+	Array
+		var arr =[1,2,3,4,5,6,7,8,9]
+		arr.find(item => item >4)
+		 arr.fill('4')
+		 var iterator = [1,2,3,4,5].entries();
+		 var indexes = [1,2,3,4,5].keys();
+	Set
+	Map
+	WeakSet
+	WeakMap
+	
+6. Asynchronous Development...?
+	Promises [Pending, Rejected, Fulfilled]
+	Promise libraries.. JQuery, Q, RXVP, ES6
+	var promise = new Promise(function(resolve, reject){
+		resolve('Dole');
+		//reject('Dole');
+	});
+	promise.then(
+	   function(){console.log('--Success--')
+	})
+	promise.catch(
+	   function(){console.log('--Caught--')
+	})
+	
+	promise.then(
+	   function(){console.log('--Success--'),
+	   function(error){console.log('--Failure--')}
+	})
+
+7. Objects in ES6
+	Object.is()
+	Object.assign()
+	Object shorthand.
+	Proxies
+8. Modules
+	IIFE
+	Common JS [exports, require] eg: 
+	AMD [define] eg: require.js
+	ES6 Modules [Export, Import] es: Angular
+	First Module
+	Multiple Exports
+9. Using ES6 today
+	Polyfills
+	ES Next
+	ES6 Shims
+	ES6 in Node
+	Transpiling.
+
+
+
+async function f(){
+	let promise = new Promise((resolve, reject)=>{ setTimeout( ()=> resolve("Done..!"), 3000) });
+	let result = await promise;
+	console.log('How are you..!')
+	promise = new Promise((resolve, reject)=>{ setTimeout( ()=> resolve("Done..!"), 3000) });
+	result = await promise;
+	console.log('What are you doing...!')
+}
+
+
+async function testNonAsynch(){
+	setTimeout( ()=> console.log("Done..!"), 3000);
+	console.log('Jai Hanuman')
+}
+
+async function testAsynch(){
+	let promise = new Promise((resolve, reject)=>{
+		setTimeout(()=> resolve("Done..!"), 5000)
+	});
+	
+	let result = await promise;
+	console.log(result);
+}
+
+async function testAsynch(){
+	await new Promise((resolve, reject)=>{
+		setTimeout(()=> resolve("Done..!"), 5000)
+	})
+}
+
+async function testAsynchPause(){
+	for(let i=0;i<10;i++){
+	console.log(i)
+	let promise = new Promise((resolve, reject)=>{
+		setTimeout(()=> resolve("Done..!"), 5000)
+	});
+	let result = await promise;
+  }
+}
+
+
+
+Questions:
+==========
+1. Inject, Mock vs SPY.
+class Eage{ 
+	sami =function doTest(){}
+}
+
+
 var test=[1,5,6];
 for(let each of test){
 	console.log(each);
@@ -32,7 +253,7 @@ JavaScript from Scratch:
 Rapid JavaScript Training:
 ==========================
 * JS-Fiddle,plunkr
-* Hoisting
+* Hoisting,2 pass execution.
 * Undefined and Not Defined
 
 Terminiologies:
