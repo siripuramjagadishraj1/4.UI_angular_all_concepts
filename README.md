@@ -32,7 +32,8 @@ Angular Topics Covered:
 
 # Topics Pending
 1. Custom Decorators
-2. Template form
+2. Template driven forms
+3. Role based login Access.
 
 # MyDreamApp
 
