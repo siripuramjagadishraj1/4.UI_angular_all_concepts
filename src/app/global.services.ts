@@ -13,7 +13,7 @@ export class GlobalServices implements OnInit{
     constructor(private http:HttpClient){ }
 
     getAllPlantsList(){
-        return this.http.get('http://localhost:8080/employee',this.httpOptions).pipe( 
+        return this.http.get('http://localhost:8081/getTestData',this.httpOptions).pipe( 
             map (
                 (data)=>{return data;}
             )
